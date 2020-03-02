@@ -1,7 +1,7 @@
 # Rubik's Cube 2x2x2 Solver
 
 ## *Abstract*
-The 2x2x2 Rubik's Cube (also known as the Pocket Cube or Mini Cube) is composed of just 8 corner pieces. Even though it is a simplified version of the regular Rubik's Cube, the Pocket Cube has 3674160 possible configurations. Being the total number of states finite, any search algorithm that is both complete and optimal can give us the shortest sequence of moves to solve any scrambled cube (e.g. BFS, Dijkstra, A*). It has been proven that the maximum number of moves required to solve any Pocket Cube is 11, but currently there is no known procedure to know exactly what these 11 moves are without searching in the states space or listing every possible state in a table with their distance from the solve state in terms of moves.
+The 2x2x2 Rubik's Cube (also known as the Pocket Cube or Mini Cube) is composed of just 8 corner pieces. Even though it is a simplified version of the regular Rubik's Cube, the Pocket Cube has 3674160 possible configurations. Being the total number of states finite, any [search algorithm](https://en.wikipedia.org/wiki/Search_algorithm) that is both complete and optimal can give us the shortest sequence of moves to solve any scrambled cube (e.g. BFS, Dijkstra, A*). It has been proven that the maximum number of moves required to solve any Pocket Cube is 11, but currently there is no known procedure to know exactly what these 11 moves are without searching in the states space or listing every possible state in a table with their distance from the solve state in terms of moves.
 
 ## *Algorithms*
 Two were the main approaches implemented in this project:
@@ -43,13 +43,7 @@ Two modalities have been implemented to better represent and visualize the cube 
 ## *Results*
 As stated in literature, Manhattan distance was the worst heuristic function out of all 3 considered in this work. The number of misplaced block while it was efficient enough to be used to solve most scrambled cubes, it was computationally demanding for longer sequences of scrambling as time complexity increases exponentially with the depth of the solution. Pattern database was the best heuristic as, of course, it gives the true estimate value, but for this python implementation required several hours for the completion of the all the database's entries.
 
-## *Screenshots*
-<img src="images/img1.gif" alt="screenshot 1" height="100">
-<img src="images/img2.gif" alt="screenshot 2" height="100">
-<img src="images/img3.gif" alt="screenshot 3" height="100">
-<img src="images/img4.gif" alt="screenshot 4" height="100">
-
-# *Usage information*
+## *Usage information*
 - Install all the requirements in requirements.txt
     ```
     $ pip3 install -r requirements.txt
@@ -59,3 +53,9 @@ As stated in literature, Manhattan distance was the worst heuristic function out
     Enter sequence: F L R' U2 D' B
     ``` 
     After computing the solution, a 3D animation of cube solving will start shortly after. 
+    
+## *Screenshots*
+<img align="center" src="images/img1.png" alt="screenshot 1" height="400">
+<img aligh="center" src="images/img2.png" alt="screenshot 2" height="400">
+<img align="center" src="images/img3.png" alt="screenshot 3" height="400">
+<img align="center" src="images/img4.png" alt="screenshot 4" height="400">
