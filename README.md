@@ -21,7 +21,7 @@ Three heuristics were taken into account:
 
 * Sum of number of misplaced colors in all 6 faces divided by 4 to guarantee consistency (as a single move can only move 4 pieces);
 * 3D [Manhattan distance](https://en.wikipedia.org/wiki/Taxicab_geometry), also known as taxicab matrix, is the sum of moves to correctly position all 8 pieces indipendently, and then divided by 4 (for the same reason as above);
-* Pattern database, which is a lookup table that stores every cube state with the real distance from solved state (precomputed using BFS);
+* [Pattern database](https://algorithmsinsight.wordpress.com/graph-theory-2/implementing-bfs-for-pattern-database/), which is a lookup table that stores every cube state with the real distance from solved state (precomputed using BFS);
 
 ## *Moves pruning*
 In order to speed up the computation, some properties of the cube have been exploited in order to prune redundant moves:
